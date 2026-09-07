@@ -1,0 +1,1 @@
+# base de datos sobre productos actualizada al dia 7/09/2026 
