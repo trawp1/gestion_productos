@@ -43,3 +43,26 @@
 
 </table>
 
+
+
+<h1>Producto por ID getbyID</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>Categoría</th>
+    <th>Proveedor</th>
+</tr>
+
+<tr>
+    <td><?= $productoId['id'] ?></td>
+    <td><?= $productoId['nombre'] ?></td>
+    <td><?= $productoId['precio'] ?></td>
+    <td><?= $productoId['categoria'] ?></td>
+    <td><?= $productoId['nombre_proveedor'] ?></td>
+</tr>
+
+</table>

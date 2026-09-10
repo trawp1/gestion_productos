@@ -24,6 +24,24 @@ class producto{
     return $consulta->fetchALL(PDO::FETCH_ASSOC);
 }
 
+public function getById($id){
+    $sql = "SELECT 
+                productos.id,
+                productos.nombre,
+                productos.precio,
+                productos.categoria,
+                proveedores.nombre AS nombre_proveedor
+            FROM productos
+            INNER JOIN proveedores
+                ON productos.idproveedor = proveedores.idProveedor
+            WHERE productos.id = $id";
+
+    $consulta = $this->connection->query($sql);
+
+    return $consulta->fetch(PDO::FETCH_ASSOC);
+}
+
+
     }
    
 ?>
