@@ -2,7 +2,7 @@
 
 <table border="1">
 
-```
+
 <tr>
     <th>Nombre</th>
     <th>Precio</th>
@@ -18,7 +18,7 @@
     </tr>
 
 <?php endforeach; ?>
-```
+
 
 </table>
 
@@ -26,11 +26,12 @@
 
 <table border="1">
 
-```
+
 <tr>
     <th>Nombre</th>
     <th>Precio</th>
     <th>Categoría</th>
+    <th>Descripción</th>
     <th>Nombre proveedor</th>
     <th>Id categoría</th>
 </tr>
@@ -41,12 +42,13 @@
         <td><?= $producto['nombre'] ?></td>
         <td><?= $producto['precio'] ?></td>
         <td><?= $producto['nombre_categoria'] ?></td>
+        <td><?= $producto['descripcion_categoria'] ?></td>
         <td><?= $producto['nombre_proveedor'] ?></td>
         <td><?= $producto['id_categoria'] ?></td>
     </tr>
 
 <?php endforeach; ?>
-```
+
 
 </table>
 
@@ -54,7 +56,7 @@
 
 <table border="1">
 
-```
+
 <tr>
     <th>ID</th>
     <th>Nombre</th>
@@ -70,6 +72,6 @@
     <td><?= $productoId['nombre_categoria'] ?></td>
     <td><?= $productoId['nombre_proveedor'] ?></td>
 </tr>
-```
+
 
 </table>

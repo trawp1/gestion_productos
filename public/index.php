@@ -16,5 +16,8 @@ require_once __DIR__ . "/../app/Controllers/proveedorescontroller.php";
 $proveedorController = new proveedorController();
 $proveedorController->index();
 
-
+require_once __DIR__ . "/../app/Controllers/categoriacontroller.php";
+$categoriacontroller = new categoriacontroller();
+$categoriacontroller->index();
 ?>
+

@@ -32,24 +32,17 @@ class producto {
 }
 
     public function getById($id) {
-        $sql = "SELECT 
-                    productos.id,
-                    productos.nombre,
-                    productos.precio,
-                    productos.categoria,
-                    proveedores.nombre AS nombre_proveedor,
-                    categorias.nombre AS nombre_categoria
-                FROM productos
-                INNER JOIN proveedores
-                    ON productos.idproveedor = proveedores.idProveedor
-                INNER JOIN categorias
-                    ON productos.id_categoria = categorias.id_categoria
-                WHERE productos.id = $id";
 
-        $consulta = $this->connection->query($sql);
+    $sql = "SELECT * FROM productos WHERE id = :id";
 
-        return $consulta->fetch(PDO::FETCH_ASSOC);
-    }
+    $consulta = $this->connection->prepare($sql);
+
+    $consulta->bindParam(':id', $id, PDO::PARAM_INT);
+
+    $consulta->execute();
+
+    return $consulta->fetch(PDO::FETCH_ASSOC);
+}
 }
 
 ?>
